@@ -219,7 +219,7 @@ i {
 
 .project-section {
     display: grid;
-    padding: 100px 50px;
+    padding: 100px 20px;
     gap: 50px 75px;
     grid-template-columns: 1fr 1fr;
 }
@@ -356,7 +356,7 @@ i {
 .about-hero video {
     width: 450px;
     border-radius: 10px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 .skills-tab-section {
