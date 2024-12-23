@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root{
+    --primary-color: #043779;
+    --secondary-color: #D7D3BF;
+    --primary-font: "Merriweather", serif;
+    --secondary-font:"Lato", sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    font-family: var(--secondary-font);
+    color: #000;
+    animation: zoomIn 0.5s ease-in-out;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.landing-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 3vh 50px;
+    background-color: var(--secondary-color);
+    min-height: 90vh;
+    border-radius: 34px;
+    border-left: solid 5px black;
+    border-top: 5px solid black;
+    border-right: solid black 13px;
+    border-bottom: solid black 13px;
+}
+
+.navbar {
+    font-family: var(--primary-font);
+    padding-top: 5vh;
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    /* margin: 0px 100px; */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    width: 50%;
+    height: 100%;
+}
+
+.navbar .nav-menu a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar .nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 15px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.2s ease-in;
+}
+
+.navbar .nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* .navbar .logo {
+    font-size: 56px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+} */
+
+.logo img {
+    width: 75px;
+}
+
+.contact-btn {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #FFF;
+    background-color: var(--primary-color);
+    border: 2px solid black;
+    border-radius: 32.5px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+
+.landing-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    min-height: 70vh;
+    /* margin: 0px 100px; */
+}
+
+i {
+    color: #542583;
+}
+
+.hero-img img {
+    border-radius: 50%;
+    border: 5px solid black;
+    margin-bottom: 60px;
+    width: 325px;
+}
+
+.hero-text {
+    padding: 0;
+    margin: 0;
+}
+
+.hero-text h2 {
+    font-size: 45px;
+}
+
+.hero-skills {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.resume-btn {
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 5px 15px;
+    background: transparent;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+.resume-btn:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+.resume-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-contact-btn {
+    padding: 5px 15px;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #00461B;
+    border: #00461B 3px solid;
+    border-radius: 30px;
+    color: #EFEBD2;
+    transition: ease-out 0.3s;
+}
+
+.hero-contact-btn:hover {
+    transform: scale(1.1);
+    transition: ease-in 0.2s;
+}
+
+
+
+
+
+/* PROJECTS PAGE */
+.skills-section {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.project-section {
+    display: grid;
+    padding: 100px 50px;
+    gap: 50px 75px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project {
+    border: 2px solid black;
+    padding-bottom: 20px;
+    background-color: #F6F5F2;
+
+}
+
+.project h1 {
+    font-size: 2rem;
+    padding: 0px 20px;
+    text-align: center;
+    cursor: default;
+}
+
+.project h3{
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.project video {
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.project p {
+    font-size: 1.25rem;
+    padding: 0px 20px;
+    text-align: justify;
+    font-family: var(--secondary-font);
+}
+
+.project a {
+    margin: 20px;
+    /* padding: 20px; */
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-family: var(--secondary-font);
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+.goku {
+    width: 100%;
+    position: absolute;
+    top: 150px;
+    animation: moveAcross 15s linear infinite;
+
+}
+
+@keyframes moveAcross {
+    0% {
+        left: -100px;
+        /* Start just outside the left edge */
+    }
+
+    100% {
+        left: 100%;
+        /* Move to just outside the right edge */
+    }
+}
+
+
+/* PAGE TRANSITIONS */
+
+.page-transition {
+    opacity: 0;
+    filter: blur(12px);
+    /* transform: scale(0.5); */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@keyframes zoomI {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+/* ABOUT PAGE */
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    /* height: 80vh; */
+    padding-top: 75px;
+}
+
+.about-hero-intro {
+    width: 500px;
+    margin: 0px 50px;
+}
+
+.about-hero-intro h1 {
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+
+.about-hero-intro p {
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    text-align: justify;
+}
+
+.about-hero video {
+    width: 450px;
+    border-radius: 10px;
+}
+
+.skills-tab-section {
+    padding-top: 50px;
+    width: 100%;
+}
+
+.skills-tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 75px 50px;
+    padding: 50px;
+}
+
+.skills {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills h1 {
+    font-family: var(--secondary-font);
+}
+
+.skills img {
+    width: 100px;
+}
+
+.skills-heading {
+    font-size: 2.5rem;
+}
+
+
+
+/* CERTIFICATIONS TAB */
+
+.certifications-tab-section h1 {
+    font-size: 2.5rem;
+}
+
+.certifications-tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    gap: 20px;
+}
+
+.achievements h1 {
+    /* font-size: 25px; */
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+.achievements img {
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+.under-progress {
+    display: none;
+}
+
+
+/* @media(max-width: 1200px){
+
+    .main-page{
+        overflow: scroll;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .landing-body{
+        padding: 50px 0px;
+        flex-flow: column-reverse;
+        gap: 0;
+        text-align: center;
+    }
+
+    .hero-img img{
+        margin: 0;
+        width: 200px;
+    }
+
+    .intro-text h2{
+        font-size: 1.5rem;
+        margin: 25px 5px;
+    }
+
+    .contact-btn{
+        display: none;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+    }
+
+} */
+
+@media(max-width: 1300px) {
+    .landing-body {
+        margin: 0px 50px;
+    }
+
+    .about-hero {
+        gap: 0;
+    }
+}
+
+
+@media(max-width: 1200px) {
+
+    .navbar {
+        height: fit-content;
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-flow: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .landing-section {
+        width: 100%;
+        margin: 5vh 50px;
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .landing-body {
+        padding: 50px 0px;
+        flex-flow: column-reverse;
+        gap: 0;
+        text-align: center;
+        margin: 0 35px;
+    }
+
+    .hero-img img {
+        /* margin: 0 25px; */
+        width: 200px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .intro-text h2 {
+        font-size: 1.5rem;
+        /* margin: 25px 15px; */
+    }
+
+    .hero-skills {
+        flex-flow: column;
+        gap: 0;
+        margin: 0;
+    }
+
+    .hero-skills p {
+        font-size: 1.15rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .resume-btn {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+
+
+    .hero-contact-btn {
+        display: none;
+        width: 80%;
+        font-size: 0.9rem;
+        background-color: #00461B;
+        border: #00461B;
+        color: #EFEBD2;
+    }
+
+    .hero-buttons {
+        flex-flow: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    /* PROJECT PAGE */
+
+    .project-section {
+        grid-template-columns: 1fr;
+        /* text-align: center; */
+        font-size: 12px;
+    }
+
+    .project a {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .about-container {
+        width: 100%;
+        flex-flow: column;
+        /* justify-content: space-evenly; */
+        /* gap: 50px; */
+    }
+
+    .about-hero {
+        flex-flow: column;
+        /* justify-content: space-between; */
+        align-items: center;
+        gap: 0px;
+        width: 100%;
+    }
+
+    .about-hero-intro {
+        display: flex;
+        flex-flow: column;
+        /* justify-content: center; */
+        align-items: center;
+        width: 100%;
+        /* margin: 0 50px; */
+    }
+
+    .about-hero-intro h1 {
+        font-size: 1.75rem;
+    }
+
+    .about-hero-intro p {
+        width: 80%;
+    }
+
+    .about-hero video {
+        width: 100%;
+        max-width: 80%;
+        height: auto;
+    }
+
+    .skills-tab-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .skills-tab {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills h1 {
+        font-size: 1rem;
+    }
+
+    .skills img {
+        min-width: 50px;
+        max-width: 80%;
+    }
+
+    .certifications-tab {
+        grid-template-columns: 1fr;
+    }
+
+
+    .certifications-tab-section h1 {
+        font-size: 1.75rem;
+        /* margin: 0px 5px; */
+    }
+
+    .achievements h1 {
+        font-size: 1rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #000; }
+}
+
+@keyframes hide-caret {
+    to { border-right: none; }
+}
+
+
+
+/* ANIMATIONS FOR PAGE */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Typewriter effect */
+h2 {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.10em solid #fff;
+    animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end 3 forwards; /* blink-caret runs only 3 times */
+    opacity: 0;
+}
+
+h2.visible {
+    opacity: 1;
+    animation-delay: 1s;
+}
+
+
+/* Apply hide-caret after typing and blink-caret */
+h2.visible::after {
+    content: '';
+    animation: hide-caret 0s forwards 3.25s; /* Start after typing and blink-caret animations */
+}
