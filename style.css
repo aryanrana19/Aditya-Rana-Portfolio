@@ -100,6 +100,7 @@ body {
 }
 
 .contact-btn {
+    display: none;
     font-family: "Raleway", sans-serif;
     font-size: 20px;
     padding: 10px 20px;
@@ -190,8 +191,8 @@ i {
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    background-color: #00461B;
-    border: #00461B 3px solid;
+    background-color: #043779;
+    border: #043779 3px solid;
     border-radius: 30px;
     color: #EFEBD2;
     transition: ease-out 0.3s;
@@ -330,7 +331,7 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 200px;
+    gap: 100px;
     /* height: 80vh; */
     padding-top: 75px;
 }
@@ -355,6 +356,7 @@ i {
 .about-hero video {
     width: 450px;
     border-radius: 10px;
+    margin-left: 50px;
 }
 
 .skills-tab-section {
@@ -471,7 +473,7 @@ i {
 }
 
 
-@media(max-width: 1200px) {
+@media(max-width: 1100px) {
 
     .navbar {
         height: fit-content;
@@ -486,11 +488,27 @@ i {
 
     .landing-section {
         width: 100%;
-        margin: 5vh 50px;
+        /* margin: 5vh 50px; */
+        margin: 0;
+        border-radius: 0px;
     }
 
     .contact-btn {
-        display: none;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 5px 15px;
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #043779;
+        border: #043779 3px solid;
+        border-radius: 30px;
+        color: #EFEBD2;
+        transition: ease-out 0.3s;
     }
 
     .logo {
@@ -510,6 +528,10 @@ i {
         width: 200px;
         padding: 0;
         margin: 0;
+    }
+
+    .hero-text h2{
+        font-size: 1.5rem
     }
 
     .intro-text h2 {
@@ -532,7 +554,7 @@ i {
     }
 
     .resume-btn {
-        width: 80%;
+        width: 100%;
         font-size: 0.9rem;
     }
 
@@ -541,8 +563,8 @@ i {
         display: none;
         width: 80%;
         font-size: 0.9rem;
-        background-color: #00461B;
-        border: #00461B;
+        background-color: #043779;
+        border: #043779;
         color: #EFEBD2;
     }
 
@@ -560,6 +582,12 @@ i {
         grid-template-columns: 1fr;
         /* text-align: center; */
         font-size: 12px;
+    }
+
+    .project{
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
 
     .project a {
@@ -678,7 +706,7 @@ h2 {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 0.10em solid #fff;
+    border-right: 0.10em solid #000;
     animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end 3 forwards; /* blink-caret runs only 3 times */
     opacity: 0;
 }
@@ -693,4 +721,27 @@ h2.visible {
 h2.visible::after {
     content: '';
     animation: hide-caret 0s forwards 3.25s; /* Start after typing and blink-caret animations */
+}
+
+
+
+/* PAGE TRANSITIONS */
+
+.page-transition {
+    opacity: 0;
+    filter: blur(12px);
+    /* transform: scale(0.5); */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+@keyframes zoomI {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
